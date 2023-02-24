@@ -18,6 +18,9 @@ public class Main {
             e.printStackTrace();
         }
 
+        Student copyStudent = student.copy();
+        System.out.println(copyStudent.equals(student));
+
 
     }
 

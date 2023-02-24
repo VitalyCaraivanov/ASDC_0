@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Objects;
 
-public class Student implements Cloneable{
+public class Student implements Cloneable {
     private int id;
     private String name;
     private String surname;
@@ -70,6 +70,12 @@ public class Student implements Cloneable{
     public Student clone() throws CloneNotSupportedException {
         return (Student) super.clone();
     }
+
+    public Student copy() {
+        return new Student(this.id, this.name, this.surname,
+                this.yearOfBirth, this.yearOfIntroduction, this.faculty);
+    }
+
 
     @Override
     public String toString() {
